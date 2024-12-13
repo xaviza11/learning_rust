@@ -1,0 +1,8 @@
+services:
+  rust-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true   # Mantén la terminal abierta para interacción
+    tty: true          # Habilita el modo terminal interactivo
+    command: ["./app"] # Ejecuta el binario compilado
